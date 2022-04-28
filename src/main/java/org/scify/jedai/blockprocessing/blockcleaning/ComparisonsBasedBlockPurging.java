@@ -39,6 +39,10 @@ public class ComparisonsBasedBlockPurging extends AbstractBlockPurging {
     protected final DblGridSearchConfiguration gridSFactor;
     protected final DblRandomSearchConfiguration randomSFactor;
 
+    public ComparisonsBasedBlockPurging() {
+        this(true);
+    }
+
     public ComparisonsBasedBlockPurging(boolean isCleanCleanER) {
         this(isCleanCleanER ? 1.00f : 1.025f);
     }
