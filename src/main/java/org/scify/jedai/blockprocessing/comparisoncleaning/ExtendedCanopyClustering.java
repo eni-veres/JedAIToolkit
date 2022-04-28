@@ -64,10 +64,16 @@ public class ExtendedCanopyClustering extends CardinalityNodePruning {
     }
 
     public void setInclusiveThreshold(int inclusiveThreshold) {
+        if (inclusiveThreshold < exclusiveThreshold) {
+            throw new RuntimeException("The Exclusive Threshold cannot be larger than the Inclusive one.");
+        }
         this.inclusiveThreshold = inclusiveThreshold;
     }
 
     public void setExclusiveThreshold(int exclusiveThreshold) {
+        if (inclusiveThreshold < exclusiveThreshold) {
+            throw new RuntimeException("The Exclusive Threshold cannot be larger than the Inclusive one.");
+        }
         this.exclusiveThreshold = exclusiveThreshold;
     }
 
