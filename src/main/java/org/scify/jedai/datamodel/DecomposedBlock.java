@@ -22,6 +22,8 @@ package org.scify.jedai.datamodel;
  */
 
 public class DecomposedBlock extends AbstractBlock {
+    private static final long serialVersionUID = 8030947883194696511L;
+
     // A type of block that comprises blocks of minimum size in the form of 2
     // int[] for higher efficiency. Only comparisons between entities1 and entities2
     // and for the same index are allowed, i.e., entities1[i] is exclusively comparable 
