@@ -54,6 +54,10 @@ public class ExtendedQGramsBlocking extends QGramsBlocking {
         this.nGramSize = nGramSize;
     }
 
+    public void setThreshold(float threshold) {
+        this.threshold = threshold;
+    }
+
     @Override
     protected Set<String> getBlockingKeys(String attributeValue) {
         final Set<String> keys = new HashSet<>();
